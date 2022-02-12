@@ -7,10 +7,9 @@ public class DoorwayPlacer : MonoBehaviour
 {
     public GameObject doorwayPrefab;
     // Start is called before the first frame update
-    IEnumerator Start()
+    public void OnGenerated(Map finishedMap)
     {
-        yield return null;
-        foreach(DoorLocation dl in GetComponent<MapGenerator>().Doorways)
+        foreach(DoorLocation dl in finishedMap.doorways)
         {
             GameObject newDoorway = Instantiate(doorwayPrefab, transform);
             newDoorway.transform.position = new Vector3(dl.position.x, 0, dl.position.y);

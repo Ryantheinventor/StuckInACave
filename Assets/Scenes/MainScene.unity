@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 1299361037}
   - component: {fileID: 1299361036}
   - component: {fileID: 1299361038}
+  - component: {fileID: 1299361039}
   m_Layer: 0
   m_Name: MapGen
   m_TagString: Untagged
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileSetData: {fileID: 11400000, guid: 955d12254eca7c3a49052483a35df22b, type: 2}
-  generateOnStart: 1
+  generateOnStart: 0
 --- !u!4 &1299361037
 Transform:
   m_ObjectHideFlags: 0
@@ -230,80 +231,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorwayPrefab: {fileID: 8211669477251716780, guid: 241b3c998767d2c809528c8174c3bae1, type: 3}
---- !u!1001 &1859696608
-PrefabInstance:
+--- !u!114 &1299361039
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1859696610, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_VolumeTrigger
-      value: 
-      objectReference: {fileID: 1859696611}
-    - target: {fileID: 1859696610, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348390857949, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389061, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_Name
-      value: Bean
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237662348420389071, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
---- !u!4 &1859696611 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3237662348390857762, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
-  m_PrefabInstance: {fileID: 1859696608}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299361035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8caca478991e6336387649192d1cceb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingCam: {fileID: 0}
+  mapGenerator: {fileID: 1299361036}
+  progress: 0
+  isDone: 0
+  playerPrefab: {fileID: 3237662348420389061, guid: 93b7b369103a9c2db933a421dcdc0b52, type: 3}
+  spawnPos: {x: 0, y: 1, z: 0}
 --- !u!1 &2138677391
 GameObject:
   m_ObjectHideFlags: 0
