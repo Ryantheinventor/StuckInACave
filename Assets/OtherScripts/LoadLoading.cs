@@ -10,4 +10,10 @@ public class LoadLoading : MonoBehaviour
         PlayerPrefs.SetInt("TargetScene",sceneID);
         SceneManager.LoadScene(1);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
