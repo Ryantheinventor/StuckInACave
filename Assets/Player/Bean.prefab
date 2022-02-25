@@ -319,7 +319,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   grounded: 0
   curGroundNormal: {x: 0, y: 1, z: 0}
-  sensitivity: 5
+  sensitivity: 2.5
   camera: {fileID: 3237662348390857762}
   layerMask:
     serializedVersion: 2
